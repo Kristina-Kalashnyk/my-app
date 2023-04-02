@@ -1,12 +1,25 @@
 {
-  "name": "backend-service",
+  "name": "my-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "that's my new awesome application",
   "main": "runServer.js",
   "scripts": {
+    "start-backend": "nodemon backend-service/runServer.js --watch server",
+    "start-fronetend": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "knex": "^2.4.2",
+    "path": "^0.12.7",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
