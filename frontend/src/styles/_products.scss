@@ -1,0 +1,123 @@
+.products {
+    @extend .section-padding;
+
+    &__content {
+        @include flex(center, center, column);
+    }
+
+    &__header {
+        @include flex(center, center, column);
+        margin-bottom: 42px;
+    }
+
+    &__cards {
+        @extend .product-cards;
+    }
+
+    &__card {
+        background-color: #f9f8f8;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+
+        &-suptitle {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 27px;
+            font-family: $font-opensans;
+            background-color: $primary-color;
+            padding: 5px 20px;
+            border-radius: 8px;
+            color: #fff;
+            width: max-content;
+        }
+
+        &-imgbox {
+            height: 387px;
+            margin-bottom: 19px;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+
+            @include responsive(lg) {
+                height: 275px;
+            }
+
+            @include responsive(sm) {
+                height: 220px;
+            }
+
+            @include responsive(xs) {
+                text-align: center;
+            }
+        }
+
+        &-title {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 35px;
+            margin-bottom: 10px;
+
+            @include responsive(sm) {
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+
+        .line {
+            height: 1px;
+            background-color: #d4d4d4;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        &-oldprice {
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 32px;
+            color: #b8b8b8;
+            text-decoration-line: line-through;
+        }
+
+        &-newprice {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 32px;
+            color: $primary-color;
+        }
+    }
+
+    &__footer {
+        width: 100%;
+        @include flex(space-between, center, row);
+
+        @include responsive(lg) {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &__prices {
+        @include flex(space-between, center, row);
+        gap: 10px;
+        font-family: $font-opensans;
+
+        @include responsive(sm) {
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        @include responsive(xs) {
+            flex-direction: row;
+            gap: 10px;
+        }
+    }
+
+    &__rating {
+        @include center;
+        gap: 2px;
+    }
+}

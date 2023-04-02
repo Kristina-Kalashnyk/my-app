@@ -1,0 +1,194 @@
+.news {
+    @extend .section-padding;
+
+    &__content {
+        @include flex(center, center, column);
+    }
+    &__block {
+        @include flex(space-between, center, row);
+        gap: 60px;
+    }
+   
+
+    &__header {
+        width: 100%;
+        @include flex(space-between, flex-end, row);
+        gap: 60px;
+        margin-bottom: 60px;
+
+        @include responsive(xxl) {
+            gap: 0;
+        }
+
+        @include responsive(xl) {
+            &-texts {
+                width: 75%;
+            }
+        }
+
+        @include responsive(md) {
+            margin-bottom: 60px;
+            @include center;
+            flex-direction: column;
+
+            &-texts {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+        }
+        @include responsive(xxl) {
+            .title-2 {
+                width: 702px;
+            }
+        }
+        @include responsive(sm) {
+            .title-2 {
+                font-size: 34px;
+                line-height: 1.5;
+            }
+        }
+
+        @include responsive(xs) {
+            &-texts {
+                .title-2 {
+                    @include responsive(xs) {
+                        line-height: 1.5;
+                        font-size: 30px;
+                    }
+
+                    @include responsive(xxs) {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__cards {
+        width: 100%;
+    }
+
+    &__card {
+        border-radius: 30px;
+        @include flex(center, center, column);
+        position: relative;
+        flex: 1;
+
+        &-bg {
+            height: 515px;
+            border-radius: 30px;
+            object-fit: cover;
+            width: 100%;
+
+            @include responsive(md) {
+                height: 420px;
+            }
+        }
+
+        &-main {
+            z-index: 3;
+            width: 92%;
+            margin: 0 auto;
+            padding: 50px;
+            box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.14);
+            border-radius: 30px;
+            background-color: #fff;
+            @include flex(flex-start, flex-start, column);
+            position: absolute;
+            bottom: -72px;
+
+            @include responsive(lg) {
+                width: 89%;
+                padding: 40px;
+            }
+
+            @include responsive(md) {
+                padding: 40px 20px;
+                bottom: -90px;
+            }
+
+            @include responsive(sm) {
+                padding: 30px 20px;
+                bottom: -30px;
+            }
+
+            @include responsive(xs) {
+                bottom: 30px;
+            }
+        }
+
+        &-user {
+            @include flex(flex-start, center, row);
+            gap: 10px;
+            margin-bottom: 16px;
+
+            img {
+                width: 18px;
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 23px;
+            }
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 35px;
+            
+            @include responsive(md) {
+                font-size: 21px;
+            }
+
+            @include responsive(sm) {
+                font-size: 18px;
+                line-height: 1.7;
+            }
+        }
+
+        &-description {
+            @extend .description-1;
+            width: 80%;
+            margin-bottom: 20px;
+
+            @include responsive(md) {
+                width: 100%;
+            }
+
+            @include responsive(sm) {
+                font-size: 16px;
+            }
+        }
+
+        &-button {
+            @include flex(flex-start, center, row);
+            gap: 10px;
+            background-color: transparent;
+            @include hoverEffect;
+
+            span {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 28px;
+                color: $primary-color;
+                @include hoverEffect;
+
+                @include responsive(sm) {
+                    font-size: 16px;
+                }
+            }
+
+            img {
+                width: 19px;
+                height: 19px;
+            }
+
+            &:hover {
+                text-decoration: underline solid $primary-color;
+            }
+        }
+    }
+}

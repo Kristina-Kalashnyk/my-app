@@ -1,0 +1,35 @@
+.offer {
+    @extend .section-padding;
+    background-color: $primary-color;
+
+    &__header {
+        width: 100%;
+        @include flex(space-between, flex-end, row);
+        margin-bottom: 44px;
+
+        @include responsive(md) {
+            align-items: center;
+            flex-direction: column;
+        }
+
+        &-texts {
+            @include flex(flex-start, flex-start, column);
+
+            .section__header-title {
+                color: #fff;
+            }
+
+            @include responsive(md) {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            @include responsive(xxs) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+}
