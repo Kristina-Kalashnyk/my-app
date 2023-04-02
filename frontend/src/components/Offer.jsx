@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderName from "../components/HeaderName";
-import Card from "./Card";
+import ProductCard from "./ProductCard";
 
 const Offer = () => {
   return (
@@ -16,7 +16,7 @@ const Offer = () => {
             </div>
           </div>
           <div className="offer__cards">
-            <Card/>;
+            <ProductCard/>;
           </div>
         </div>
       </div>

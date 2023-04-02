@@ -45,8 +45,9 @@
         }
 
         &-imgbox {
+            justify-content: center;
+            display: flex;
             height: 350px;
-            padding-bottom: 15px;
             margin-bottom: -55px;
             
             img {
