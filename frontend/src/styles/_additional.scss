@@ -45,27 +45,28 @@
 }
 
 .product-cards{
-   width: 100%;
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-   grid-gap: 20px;
-
-   @include responsive(xxl) {
-       grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-   }
-
-   @include responsive(lg) {
-       grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-   }
-
-   @include responsive(sm) {
-       grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-   }
-
-   @include responsive(xs) {
-       grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-   }
-}
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 20px;
+ 
+    @include responsive(xxl) {
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    }
+ 
+    @include responsive(lg) {
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+ 
+    @include responsive(sm) {
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+ 
+    @include responsive(xs) {
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    }
+ }
+ 
 
 .section-padding{
    padding: 140px 0;

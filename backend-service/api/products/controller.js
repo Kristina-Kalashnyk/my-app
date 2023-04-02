@@ -1,7 +1,10 @@
 const dbConfig = require("../../configuration/database");
+const lodash = require('lodash');
 
-exports.getAll = async (req, res) => {
-    return dbConfig.db.select('*').from('products')
+exports.getProducts = async (req, res) => {
+    const count = lodash.get(req, 'query.size');
+
+    return dbConfig.db.select('*').from('products').limit(count)
         .then(data => {
             console.log(data);
             return res.json(data);

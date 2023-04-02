@@ -7,6 +7,7 @@ const Products = () => {
     <section className="products">
         <div className='container'>
             <div className='products__content'>
+           
                 <div className='products__header'>
                     <HeaderName suptitle={"Categories"} title={"Our Products"} />
                 </div>
@@ -15,6 +16,7 @@ const Products = () => {
                 </div>
             </div>
         </div>
+      
     </section>
   )
 }
