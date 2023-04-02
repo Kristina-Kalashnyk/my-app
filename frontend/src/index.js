@@ -15,3 +15,8 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+let productCard = document.querySelector(".products__card-one");
+productCard.addEventListener('click', function (e) {
+
+})
