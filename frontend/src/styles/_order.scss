@@ -1,19 +1,7 @@
 .order {
      position: relative;
        padding: 5px 0 50px 0;
-       
-       @include responsive(md) {
-           padding: 150px 0;
-       }
-
-       @include responsive(sm) {
-           padding: 110px 0;
-       }
-      
-       @include responsive(xs) {
-           padding: 80px 0;
-       }
-    
+           
     &__bg {
         img{
             width: 100vw;
@@ -37,5 +25,20 @@
         background-color: #FDB02D;
         opacity: 16%;
         
+       @include responsive(md) {
+        margin-top: 300px;
+        height: 500px;
+       }
+
+       @include responsive(sm) {
+        margin-top: 250px;
+        height: 300px;
+       }
+    
+       @include responsive(xs) {
+        margin-top: 200px;
+        height: 200px;
+       }
+      
     }
 }
