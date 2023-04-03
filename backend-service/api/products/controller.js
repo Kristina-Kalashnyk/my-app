@@ -4,7 +4,7 @@ const lodash = require('lodash');
 exports.getProducts = async (req, res) => {
     const count = lodash.get(req, 'query.size');
     const order = lodash.get(req, 'query.order', 'asc');
-
+   
     return dbConfig.db.select('*').from('products').limit(count).orderBy('id', order)
         .then(data => {
             console.log(data);
@@ -16,3 +16,5 @@ exports.getProducts = async (req, res) => {
             }
         )
 }
+
+

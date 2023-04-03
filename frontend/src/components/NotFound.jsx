@@ -24,7 +24,9 @@ const NotFound = () => {
             <img src={BgImage} alt="background..." />
           </div>
           <div className='notfound-btn'>
-          <MyButton bgColor={"blue"} text={"Go to Homepage"}></MyButton>
+          <a href="/">
+          <MyButton bgColor={"blue"} text={"Go to Homepage"} ></MyButton>
+          </a>
           </div>
           
        </div>

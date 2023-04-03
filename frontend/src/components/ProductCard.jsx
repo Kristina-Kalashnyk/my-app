@@ -22,7 +22,7 @@ const ProductsCard = () => {
           }
       };
 
-      fetchProducts(12);
+      fetchProducts(16);
   },[]);
 
 const [showModal, setShowModal] = useState(false);
@@ -42,11 +42,11 @@ const closeModal = () => {
             </div>
           <div className="products__info">
            <h4 className="products__card-title">{prod.name}</h4>
-            <div className="line"></div>
+            <div className="products__line"></div>
             <div className="products__footer">
               <div className="products__prices">
-                  <span className="products__card-oldprice">${prod.old_price}</span>
-                  <span className="products__card-newprice">${prod.new_price}</span>                 
+                  <span className="products__card-oldprice">{prod.old_price}</span>
+                  <span className="products__card-newprice">{prod.new_price}</span>                 
               </div>
               <div className="products__rating">
                   <img src={Star} alt="products card rating" />
