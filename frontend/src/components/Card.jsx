@@ -1,7 +1,6 @@
 import React from 'react';
 import Star from '../img/products/star-icon.svg'
 import axios  from "axios";
-import Broc from "../img/products/broccoli.png";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -11,25 +10,24 @@ const Card = () => {
 const [products,setProduct]=useState([]);
 
 useEffect(()=>{
-      const fetchAllProducts = async()=>{
-          try{
-              const res= await axios.get("http://localhost:5000/products");
-              setProduct(res.data)
-          }catch (err) {
-              console.log(err)
-          }
+    const fetchReversProducts = async(size)=>{
+        try {
+            const res= await axios.get(`http://localhost:5000/products?size=${size}&order=desc`);
+            setProduct(res.data)
+        } catch (err) {
+            console.log(err)
+        }
 
-      };
-      fetchAllProducts();
-  },[]);
-
+    };
+    fetchReversProducts(4);
+},[]);
     return (
-        <div className="products__card">
+        <div className="products__card-offer">
            {products.map(prod => (
-         <div>
+         <div className="products__card-one">
       <span className="products__card-suptitle">{prod.sort}</span>
       <div className="products__card-imgbox">
-        <img src={Broc} alt="product pic" />
+        <img src={prod.picture_path} alt="product pic" />
       </div>
       <div className="products__info">
         <h4 className="products__card-title">{prod.name}</h4>

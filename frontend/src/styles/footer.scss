@@ -1,7 +1,7 @@
 .footer {
     &__main {
         width: 100%;
-        padding-bottom: 145px;
+        padding-bottom: 125px;
 
         @include responsive(sm) {
             padding-bottom: 90px;

@@ -59,9 +59,9 @@ const Header = () => {
           </div>
           
           <button className="navbar__button">
-            <div className="navbar__button-icon">
+            <a href="/order" className="navbar__button-icon">
               <img src={NavbarButtonIcon} alt="icon..." />
-            </div>
+            </a>
             <div className="navbar__button-text">
               Cart <span>0</span>
             </div>

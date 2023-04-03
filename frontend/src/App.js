@@ -12,7 +12,7 @@ export default function App() {
   <Route path="/" element={<HomePage />} />
   <Route path="/order" element={<OrderPage />} />
   <Route path="/cart" element={<CartPage />} />
-  <Route path="/404" element={<NotFoundPage />} />
+  <Route path="*" element={<NotFoundPage />} />
   </Routes>
   </BrowserRouter>
    );

@@ -17,7 +17,11 @@
         @extend .product-cards;
     
     }
-
+    &__card-offer {
+        @include flex(center, center, row-reverse);
+        gap: 20px;        
+        justify-content: space-around;
+    }
     &__card {
         
         @include flex(center, center, row);

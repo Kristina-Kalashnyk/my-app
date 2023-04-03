@@ -2,15 +2,13 @@ import React from 'react';
 import Star from '../img/products/star-icon.svg';
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import axios  from "axios";
-
 
 const ProductsCard = () => {
 
   const [products,setProduct]=useState([]);
   useEffect(()=>{
-      const fetchAllProducts = async(size)=>{
+      const fetchProducts = async(size)=>{
           try {
               const res= await axios.get(`http://localhost:5000/products?size=${size}`);
               setProduct(res.data)
@@ -19,7 +17,7 @@ const ProductsCard = () => {
           }
 
       };
-      fetchAllProducts(12);
+      fetchProducts(12);
   },[]);
 
     return ( 
@@ -50,6 +48,7 @@ const ProductsCard = () => {
           </div>
         </div>
         </div> ))}
+        <button className='showMore'>Show more</button>
       </div>
     );
   };
