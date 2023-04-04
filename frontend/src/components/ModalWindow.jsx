@@ -2,6 +2,7 @@ import "../styles/main.scss";
 import React from 'react';
 import '../styles/_modal.scss';
 import PropTypes from 'prop-types';
+import Sad from '../img/products/sad.png';
 import Star from '../img/products/star-icon.svg';
 
 
@@ -15,17 +16,17 @@ const ModalWindow = ({isOpen, onCancel}) => {
           <div className="modal__window">
            <span className="products__card-suptitle"> Sort</span>
             <div className="products__card-imgbox">
-              <img src=""alt="products pic" />
+              <img src={Sad} alt="products pic" />
             </div>
-          <div className="products__info">
-           <h4 className="products__card-title">Name</h4>
-            <div className="line"></div>
-            <div className="products__footer">
-              <div className="products__prices">
+             <div className="products__info">
+              <h4 className="products__card-title">Name</h4>
+               <div className="line"></div>
+                <div className="products__footer">
+                 <div className="products__prices">
                   <span className="products__card-oldprice">Old price</span>
                   <span className="products__card-newprice">New Price</span>                 
               </div>
-              <div className="products__rating">
+              <div className="products__rating-modal">
                   <img src={Star} alt="products card rating" />
                   <img src={Star} alt="products card rating" />
                   <img src={Star} alt="products card rating" />
@@ -34,7 +35,7 @@ const ModalWindow = ({isOpen, onCancel}) => {
               </div>
           </div>
         </div>
-            <button onClick={onCancel}> Close </button>
+            <button onClick={onCancel} className="buttn-close"> Х </button>
           </div>
         </div>
       

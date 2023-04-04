@@ -1,47 +1,84 @@
 import React, { useRef } from 'react';
 import Banner from '../img/cart/Banner.png';
-import Error from '../img/notfound/404.png';
-import HeaderName from "../components/HeaderName";
-import MyButton from './MyButton';
-import { useEffect } from "react";
-import { useState } from "react";
-
+import useForm from '../hooks/useForm';
 
 const Order = () => {
 
-      const name = useRef();
-      const email = useRef();
-      const address = useRef();
-      const phone = useRef();
-      const information = useRef();
-
-      const handleClick = () => {
-         localStorage.setItem("Name", name.current.value);
-         localStorage.setItem("Email", email.current.value);
-         localStorage.setItem("Address", address.current.value);
-         localStorage.setItem("Phone", phone.current.value);
-         localStorage.setItem("Information", information.current.value);
-      }
+const {values, handleChange} = useForm({
+   email: '',
+   message: '',
+   name: '',
+   telephone: '',
+});
    
-    return (
+const handleSubmit = (event) => {
+   event.preventDefault();  
+}
+  
+   return (
        <section className="order">
         <div className='order'>       
            <div className="order__bg">
              <img src={Banner} alt="background..." />
           </div>   
-          <div className="order__area">
-          
-                  </div> 
-                  <div className="input-field">
-            <input type="text" ref={name} placeholder="Your Full Name" />
-            <input type="text"  ref={email} placeholder="Your Email Address" pattern="(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})" />
-            <input type="text"  ref={address} placeholder="Your Company  Address" />
-            <input type="text"  ref={phone} placeholder="Enter Your Phone" />
-            <input type="text"  ref={information} placeholder="Some Extra Information" />
-            <button onClick={handleClick}>Submit</button>
+          <div className="order__area"></div> 
+            <form onSubmit={handleSubmit} className='fieldarea'>
+              <label htmlFor="name" className='fieldarea__input'> Full Name*
+					<input className='fieldarea__input'
+						placeholder="  Your Full Name"
+                  id="name"
+                  type="text"
+						name="name"
+						value={values.name}
+                  onChange={handleChange}
+					/>
+				</label>
+            <label htmlFor="email" className='fieldarea__input'> Your Email*
+					<input className='fieldarea__input'
+						placeholder="  Your Email Address"
+                  id="email"
+						type="email"
+						name="email"
+						value={values.email}
+                  onChange={handleChange}
+                  pattern="(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})" 
+					/>
+				</label>
+            <label htmlFor="address" className='fieldarea__input'> Address*
+					<input className='fieldarea__input'
+                  placeholder="  Your Company  Address"
+                  id="address"
+						type="text"
+						name="address"		
+						value={values.address}
+                  onChange={handleChange}
+					/>
+				</label>
+            <label htmlFor="telephone" className='fieldarea__input'> Pnohe number*
+					<input className='fieldarea__input'
+                  placeholder="  Enter Your Phone"
+                  id="telephone"
+						type="text"
+						name="telephone"
+						value={values.telephone}
+                  onChange={handleChange}
+					/>
+				</label>
+            <div className='fieldarea__input-add'>       
+            <label htmlFor="message" className='fieldarea__input'> Message
+					<input   className='fieldarea__input-mess' 
+                  placeholder="  Some Extra Information"
+                  id="message"
+						name="message"
+						value={values.message}
+						onChange={handleChange}
+					/>					
+				</label>           
+            <button className='btn-confirm'> <a href="/cart"> Confirm </a></button>
+            </div>
+          </form>
           </div>      
-       </div>
-     </section>
+      </section>
     );
 };
 

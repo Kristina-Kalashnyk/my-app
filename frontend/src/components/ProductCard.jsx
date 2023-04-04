@@ -58,7 +58,6 @@ const closeModal = () => {
           </div>
         </div>
         </div> ))}
-        <button className='showMore'>Show more</button>
         <ModalWindow isOpen={showModal} onCancel={closeModal}>
         </ModalWindow>
       </div>

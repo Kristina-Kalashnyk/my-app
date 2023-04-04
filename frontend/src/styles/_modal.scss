@@ -18,4 +18,23 @@
     
     }
 }
- 
+
+.buttn-close{
+    top: 55px;
+    right: 65px;
+    width: 60px;
+    height: 40px;
+    border-radius: 16px;
+    background-color: #274C5B;
+    color: white;
+    position: absolute;
+}
+
+.products__rating-modal {
+    position: absolute;
+    padding-top: 15px;
+    left: 20px;
+    bottom: 150px;
+
+}
+

@@ -45,9 +45,71 @@
        }
       
     }
-    .input-field {
+    .fieldarea {
+        margin-bottom: -100px;
+        @include flex(center, center, row);
+        gap: 55px;        
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        
         position: absolute;
         bottom: 350px;
         left: 15px;
+
+        &__input {
+            font-family: $font-roboto;
+            font-size: 16px;
+            font-weight: 600;
+            width: 560px;
+            height: 60px;
+            border-radius: 16px;
+            border-color: #7EB693;
+            border-width: 1px;
+           
+            &-mess {
+                position: absolute;
+                                right: 115px;
+                width: 1275px;
+                height: 200px;
+                border-radius: 16px;
+                border-color: #7EB693;
+                
+            }
+           
+            &-add {
+                @include flex(center, center, column);
+                gap: 65px;
+            }
+           
+        }
+        
      }
 }
+
+.btn-confirm {
+    top: 140px;
+    position: relative;
+    border-radius: 16px;
+    @include center;
+    gap: 24px;
+    @include transition(transform, .4s, ease-in-out);
+    min-width: 250px;
+    min-height: 70px;
+    background-color: $primary-color;
+    border-color: $primary-color;
+       a {
+        font-weight: 700;
+        font-size: 20px;
+        color: #fff;
+    }
+    
+}
+input::placeholder {
+    font-family: $font-roboto;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    color: #ABABAB;
+  }
+
+
