@@ -7,14 +7,29 @@ exports.getProducts = async (req, res) => {
    
     return dbConfig.db.select('*').from('products').limit(count).orderBy('id', order)
         .then(data => {
-            console.log(data);
             return res.json(data);
         })
         .catch(error => {
                 console.log('DATABASE ERROR', error);
-                res.json(error);
+                res.json({databaseError: error});
             }
         )
-}
+};
 
 
+exports.getById = async (req, res) => {
+    const productId = lodash.toNumber(lodash.get(req, 'params.id'));
+   
+    return dbConfig.db.select('*').from('products').where('id', productId)
+        .then(data => {
+            product = lodash.head(data);
+            console.log(product);
+
+            return res.json(product);
+        })
+        .catch(error => {
+                console.log('DATABASE ERROR', error);
+                res.json({databaseError: error});
+            }
+        )
+};

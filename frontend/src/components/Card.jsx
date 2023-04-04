@@ -34,8 +34,8 @@ useEffect(()=>{
         <div className="products__line"></div>
         <div className="products__footer">
             <div className="products__prices">
-                <span className="products__card-oldprice">{prod.old_price}</span>
-                <span className="products__card-newprice">{prod.new_price}</span>
+                <span className="products__card-oldprice">{prod.new_price}</span>
+                <span className="products__card-newprice">$11.00</span>
             </div>
             <div className="products__rating">
                 <img src={Star} alt="products card rating" />
