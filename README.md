@@ -20,7 +20,7 @@ And finally run backend service using node runServer.js command:
 
 `node .\runServer.js`
 
-This frontend part oа the project as created via popular fronend React.js Framework
+This frontend part of the project created via popular fronend React.js Framework
 [Create React App](https://github.com/facebook/create-react-app).
 
 To keep running services in parralel you need to open frontend project directory:
