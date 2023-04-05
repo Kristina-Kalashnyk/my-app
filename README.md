@@ -14,7 +14,7 @@ npm install
 node .\runServer.js 
 ```
 Runs the app in the development mode.
-Open [http://localhost:5000](http://localhost:5000/products) to view it in your browser.
+Open [http://localhost:5000/products](http://localhost:5000/products) to view it in your browser.
 
 This frontend part og the project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
