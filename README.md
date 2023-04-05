@@ -1,39 +1,43 @@
 # Final project - Organick shop
 
-#####  It's a full stack app created by using React.js + Node.js(Express)
+#####  It's a full stack application created created with technologies stack React + Node.js + SQlite database. 
+##### The developed application is an online store where user can purchase various organic products.
+##### The frontend and backend parts connect to each other using the REST API and pass data in JSON format. We get data from the database about each product.  Also, the functionality of the site implies that you can add a product to the cart and save the data about the buyer in LocalStorage and then write the data about the new purchase and the buyer into the database.
 
 # Getting Started with Project Installation
 
-## Available Scripts
+## Commands to install and run service
 
-In the BACKEND-SERVICE project directory, you can run:
-###
-```
-cd backend-service
-npm install
-node .\runServer.js 
-```
-Runs the app in the development mode.
-Open [http://localhost:5000/products](http://localhost:5000/products) to view it in your browser.
+To run backend part you have to change directory to backend-service:
 
-This frontend part og the project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+`cd backend-service`
 
-Then you need to open another terminal.
-In the FRONTEND project directory, you can run:
-###
-```
-cd frontend
-npm install
-npm start
-```
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Install dependencies via such command:
 
-The page will reload when you make changes.
+`npm install`
+
+And finally run backend service using node runServer.js command 
+
+`node .\runServer.js`
+
+This frontend part oа the project as created via popular fronend React.js Framework
+[Create React App](https://github.com/facebook/create-react-app).
+
+To keep running services in parralel you need to open frontend project directory:
+
+`cd frontend`
+
+Install dependencies via such command:
+
+`npm install`
+
+And run frontend using command:
+
+`npm start`
 
 The Database management system used is **SQlite**, that does not require additional data to install and run.
 **SQLite** is an in-process  library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine.
 
 The database file is located in the project folder:
 
-`my-app\backend-service\datasources\database.sqlite`
+`my-app/backend-service/datasources/database.sqlite` 
