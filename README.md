@@ -16,7 +16,7 @@ Install dependencies via such command:
 
 `npm install`
 
-And finally run backend service using node runServer.js command 
+And finally run backend service using node runServer.js command:
 
 `node .\runServer.js`
 
@@ -34,6 +34,8 @@ Install dependencies via such command:
 And run frontend using command:
 
 `npm start`
+
+## SQLite
 
 The Database management system used is **SQlite**, that does not require additional data to install and run.
 **SQLite** is an in-process  library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine.
