@@ -3,7 +3,6 @@ import HeaderName from "../components/HeaderName";
 import MainImage from "../img/about/about-main-image.png";
 import AboutImageFirst from "../img/about/about-item-1.png";
 import AboutImageSecond from "../img/about/about-item-2.png";
-
 import MyButton from './MyButton';
 
 const About = () => {

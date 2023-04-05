@@ -6,6 +6,7 @@
  
    &__content {
         @include flex(center, center, column);
+       
     }
 
     &__header {
@@ -31,15 +32,16 @@
     &__card {
         
         @include flex(center, center, row);
-        gap: 20px;        
+        flex: 1 1 1 1;
+        gap: 25px;        
         flex-flow: row wrap;
         justify-content: space-around;
-        
+
         &-one {
             border-radius: 30px;
             width: 20vw;
             background-color: #f9f8f8;
-            padding: 15px;
+            padding: 10px;
         }
 
         &-suptitle {

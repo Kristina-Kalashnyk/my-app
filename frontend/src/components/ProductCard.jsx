@@ -5,18 +5,16 @@ import { useState } from "react";
 import axios  from "axios";
 import ModalWindow from './ModalWindow';
 
-import PropTypes from 'prop-types'
-import Func from './Func';
 
 const ProductsCard = () => {
 
-  const [products,setProduct]=useState([]);
+  const [products,setProducts]=useState([]);
 
   useEffect(()=>{
       const fetchProducts = async(size)=>{
           try {
-              const res= await axios.get(`http://localhost:5000/products?size=${size}`);
-              setProduct(res.data)
+              const productsList = await axios.get(`http://localhost:5000/products?size=${size}`);
+              setProducts(productsList.data)
           } catch (err) {
               console.log(err)
           }
@@ -60,9 +58,10 @@ const closeModal = () => {
         </div> ))}
         <ModalWindow isOpen={showModal} onCancel={closeModal}>
         </ModalWindow>
+        
       </div>
     );
-  };
+  }; 
   
  export default ProductsCard;
 

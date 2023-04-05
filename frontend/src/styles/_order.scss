@@ -52,7 +52,6 @@
         gap: 55px;        
         flex-flow: row wrap;
         justify-content: space-evenly;
-        
         position: absolute;
         bottom: 350px;
         left: 15px;
@@ -69,8 +68,8 @@
            
             &-mess {
                 position: absolute;
-                right: 115px;
-                width: 1275px;
+                right: 135px;
+                width: 1210px;
                 height: 200px;
                 border-radius: 16px;
                 border-color: #7EB693;
@@ -90,8 +89,7 @@
                     right: 35px;
                     width: 250px;
                     height: 80px;    
-                   }
-                
+                   }                
             }
            
             &-add {

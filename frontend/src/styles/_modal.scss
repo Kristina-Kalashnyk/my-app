@@ -1,3 +1,5 @@
+@import "./additional"; 
+
 .modal {
     width: 100vw;
     height: 100vh;
@@ -9,15 +11,151 @@
     justify-content: center;
     align-items: center;
     
-    &__window {
-        padding: 20px;
+    &__content {
+        padding: 50px;
         position: absolute;
         width: 100vw;
-        height: 550px;
+        height: 650px;
         background-color:#FFFAFA;
     
     }
-}
+
+    &__window {
+        display: flex;
+        height: 500px;
+        /*&__card {
+        
+            @include flex(center, center, row);
+            flex: 1 1 1 1;
+            gap: 25px;        
+            flex-flow: row wrap;
+            justify-content: space-around;
+        
+            &-one {
+                border-radius: 30px;
+                width: 20vw;
+                background-color: #f9f8f8;
+                padding: 10px;
+            }*/
+        
+            &-suptitle {
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 27px;
+                font-family: $font-opensans;
+                background-color: $primary-color;
+                padding: 5px 20px;
+                border-radius: 8px;
+                color: #fff;
+                width: max-content;
+                height: 40px;
+                margin: 25px;
+            }
+        
+            &-imgbox {
+                justify-content: center;
+                display: flex;
+                height: 350px;
+                margin-bottom: -55px;
+                
+                img {
+                    right: 15px;
+                    height: 85%;
+                    object-fit: cover;
+                }
+        
+                @include responsive(lg) {
+                    height: 275px;
+                }
+        
+                @include responsive(sm) {
+                    height: 220px;
+                }
+        
+                @include responsive(xs) {
+                    text-align: center;
+                }
+            }
+            &-prices {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                gap: 10px;
+                font-family: $font-opensans;
+            
+                @include responsive(sm) {
+                    flex-direction: column;
+                    gap: 3px;
+                }
+            
+                @include responsive(xs) {
+                    flex-direction: row;
+                    gap: 10px;
+                }
+            }
+
+            &-card-oldprice {
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 32px;
+                color: #b8b8b8;
+                text-decoration-line: line-through;
+            }
+        
+            &-card-newprice {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 32px;
+                color: $primary-color;
+            }
+                    
+            &-card-title {
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 35px;
+                margin-bottom: 10px;
+        
+                @include responsive(sm) {
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }
+
+            &-text {
+                p {
+                    margin: 25px 0;
+                }
+            }
+            &-btns {
+                margin-top: 25px;
+                @include flex(start, center, row);
+                gap: 15px;
+                margin-left: -150px;
+            }
+       
+            &-text-descr{
+                margin-top: 15px;
+                margin-left: -450px;
+            }
+        }
+        
+        &__footer {
+            width: 100%;
+            @include flex(space-between, center, row);
+        
+            @include responsive(lg) {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        
+     
+        &__rating {
+            @include center;
+            gap: 2px;
+        }
+        }
+
 
 .buttn-close{
     top: 55px;
@@ -38,3 +176,26 @@
 
 }
 
+.modal-quantity{
+    @include flex(start, center, row);
+    gap: 15px;
+
+    input {
+        margin-left: 8px;
+        height: 70px;
+        border: 2px solid #274C5B;
+        border-radius: 16px;
+    }
+}
+
+.label{ 
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #274C5B;
+}
+
+
+ 

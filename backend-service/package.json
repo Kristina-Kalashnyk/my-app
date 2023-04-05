@@ -4,11 +4,10 @@
   "description": "that's my new awesome application",
   "main": "runServer.js",
   "scripts": {
-    "start-backend": "nodemon backend-service/runServer.js --watch server",
-    "start-fronetend": "",
+    "start-backend": "node runServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Krystyna Kalashnyk",
   "license": "ISC",
   "dependencies": {
     "compression": "^1.7.4",

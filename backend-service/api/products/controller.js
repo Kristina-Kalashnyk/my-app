@@ -21,8 +21,8 @@ exports.getById = async (req, res) => {
     const productId = lodash.toNumber(lodash.get(req, 'params.id'));
    
     return dbConfig.db.select('*').from('products').where('id', productId)
-        .then(data => {
-            product = lodash.head(data);
+        .then(product => {
+          
             console.log(product);
 
             return res.json(product);

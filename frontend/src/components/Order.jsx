@@ -56,7 +56,7 @@ const handleSubmit = (event) => {
 				</label>
             <label htmlFor="telephone" className='fieldarea__input'> Pnohe number*
 					<input className='fieldarea__input'
-                  placeholder="  Enter Your Phone"
+                  placeholder=" Enter Your Phone"
                   id="telephone"
 						type="text"
 						name="telephone"
@@ -67,7 +67,7 @@ const handleSubmit = (event) => {
             <div className='fieldarea__input-add'>       
             <label htmlFor="message" className='fieldarea__input'> Message
 					<input   className='fieldarea__input-mess' 
-                  placeholder="  Some Extra Information"
+                  placeholder=" Some Extra Information"
                   id="message"
 						name="message"
 						value={values.message}

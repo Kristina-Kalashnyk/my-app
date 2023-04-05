@@ -58,6 +58,7 @@
     }
 
     &.bg-blue-btn {
+        padding-right: 25px;
         min-width: 250px;
         background-color: $primary-color;
         border-color: $primary-color;
@@ -68,6 +69,7 @@
     }
 
     &.bg-white-btn {
+        padding-right: 25px;
         min-width: 220px;
         background-color: #fff;
         border-width: 2px;
