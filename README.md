@@ -1,6 +1,6 @@
 # Final project - Organick shop
 
-##### About project
+#####  It's a full stack app created by using React.js + Node.js(Express)
 
 # Getting Started with Project Installation
 
@@ -16,7 +16,7 @@ npm install
 node .\runServer.js 
 ```
 Runs the app in the development mode.
-Open [http://localhost:5000](http://localhost:5000) to view it in your browser.
+Open [http://localhost:5000](http://localhost:5000/products) to view it in your browser.
 
 Then you need to open another terminal.
 In the FRONTEND project directory, you can run:
