@@ -4,8 +4,6 @@
 
 # Getting Started with Project Installation
 
-This frontend part og the project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the BACKEND-SERVICE project directory, you can run:
@@ -17,6 +15,8 @@ node .\runServer.js
 ```
 Runs the app in the development mode.
 Open [http://localhost:5000](http://localhost:5000/products) to view it in your browser.
+
+This frontend part og the project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Then you need to open another terminal.
 In the FRONTEND project directory, you can run:
