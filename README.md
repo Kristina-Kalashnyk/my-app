@@ -2,7 +2,7 @@
 
 #####  It's a full stack application created created with technologies stack React + Node.js + SQlite database. 
 ##### The developed application is an online store where user can purchase various organic products.
-##### The frontend and backend parts connect to each other using the REST API and pass data in JSON format. We get data from the database about each product.  Also, the functionality of the site implies that you can add a product to the cart and save the data about the buyer in LocalStorage and then write the data about the new purchase and the buyer into the database.
+##### The frontend and backend parts connect to each other using the REST API and pass data in JSON format. We get data from the database about each product.  Also, the functionality of the site implies that user can add a product to the cart and  data about the buyer will be saved in LocalStorage, after that data about new purchase and the buyer will be saved into the database.
 
 # Getting Started with Project Installation
 
